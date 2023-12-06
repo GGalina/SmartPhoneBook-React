@@ -1,18 +1,27 @@
 import styled from 'styled-components';
+import backgroundGrey from '../../assets/background-grey.jpg';
 
 export const FormContainer = styled.div`
-    width: 800px;
-    background-color: #1f1d1d;
-    margin: 50px auto;
-    border-radius: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: relative;
-    box-shadow: 0px 0px 20px 10px #ff6600;
+    width: 100%;
+    background-image: url(${backgroundGrey});
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    top: 65px;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+`;
+
+export const Form = styled.form`
+    width: 600px;
+    background-color: #99a7b5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px #484f56;
+    padding: 20px 10px;
 `;
 
 export const FormTitle = styled.h2`
@@ -22,12 +31,12 @@ export const FormTitle = styled.h2`
     display: block;
     text-align: center;
     padding-top: 10px;
-    color: #ff6600;
+    color: #25282c;
+    margin: 0;
 `;
 
 export const InputBox = styled.div`
-    width: 800px;
-    background-color: #f49d08;
+    width: 600px;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -44,33 +53,13 @@ export const Label = styled.label`
     width: 550px;
     justify-content: space-between;
     align-items: flex-end;
-`;
-
-export const LabelTwo = styled.label`
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    text-align: left;
-    padding: 20px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-end;
-`;
-
-export const LabelThree = styled.label`
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    text-align: left;
-    padding: 20px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-end;
+    color: #25282c;
 `;
 
 export const Input = styled.input`
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
+    padding-left: 10px;
     width: 400px;
     height: 35px;
     border-radius: 10px;
@@ -93,13 +82,14 @@ export const Button = styled.button`
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    background-color: #1f1d1d;
-    color: #ffffff;
-    border: 2px solid #ff6600;
+    background-color: #25282c;
+    color: #F2F2F2;
+    border: 1px solid #25282c;
     outline: none;
     cursor: pointer;
     :hover {
-        background-color: #ff6600;
-        color: #000000;
+        background-color: #F2F2F2;
+        border: 1px solid #F2F2F2;
+        color: #25282c;
     }
 `;

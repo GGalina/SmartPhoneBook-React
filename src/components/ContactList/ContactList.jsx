@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, selectFilteredContacts, selectIsLoading } from 'Redux/Phonebook/phonebookSelectors';
 import { getContacts, deleteContact } from 'Redux/Phonebook/phonebookOperations';
-import { ListItem, DeleteBtn, List } from './ContactList.styled';
+import { ListItem, DeleteBtn, List, Wrapper } from './ContactList.styled';
 import { Loader } from 'components/Loader/Loader';
 
 export const ContactList = () => {
@@ -16,8 +16,6 @@ export const ContactList = () => {
         dispatch(getContacts());
     }, [dispatch]);
 
-   
-
     const filtered = contacts.filter(contactItem =>
         contactItem.name.toLowerCase().includes(filter)
     );
@@ -27,7 +25,7 @@ export const ContactList = () => {
     };
 
     return (
-        <>
+        <Wrapper>
             {isLoading && <Loader />}
             {filtered?.length > 0 && (
                 <List>
@@ -44,6 +42,6 @@ export const ContactList = () => {
                     ))}
                 </List>
             )} 
-        </>
+        </Wrapper>
     );
 };

@@ -8,7 +8,7 @@ export const addContact = createAsyncThunk(
             const contact = await addContactApi(newContact);
             return contact.data;
         } catch (error) {
-        return thunkAPI.rejectWithValue(error.message);
+            return thunkAPI.rejectWithValue(error.message);
         }
     }
 );

@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import backgroundGrey from '../../assets/background-grey.jpg';
+
+export const Wrapper = styled.div`
+    width: 100%;
+    background-image: url(${backgroundGrey});
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 42px;
+    position: absolute;
+    bottom: 0;
+    top: 65px;
+    box-sizing: border-box;
+`;
 
 export const Container = styled.div`
-    width: 800px;
-    background-color: #1f1d1d;
-    margin: 50px auto;
-    border-radius: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: relative;
-    box-shadow: 0px 0px 20px 10px #ff6600;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 500px;
 `;
 
 export const Title = styled.h2`
@@ -22,9 +24,8 @@ export const Title = styled.h2`
     font-weight: 600;
     display: block;
     text-align: left;
-    padding-top: 10px;
-    color: #ff6600;
-    
+    padding-top: 30px;
+    color: #25282c;
 `;
 
 export const Desc = styled.p`
@@ -33,14 +34,13 @@ export const Desc = styled.p`
     font-weight: 400;
     line-height: 1.5em;
     display: block;
-    text-align: center;
-    padding: 10px 30px;
-    color: #ffffff;
+    color: #F2F2F2;
+    padding-top: 30px;
+    padding-bottom: 20px;
 `;
 
 export const LinkBox = styled.div`
-    width: 800px;
-    background-color: #f49d08;
+    width: 500px;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -52,23 +52,22 @@ export const LinkBox = styled.div`
 export const Link = styled(NavLink)`
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     text-align: center;
     display: block;
-    padding: 15px 50px;
+    padding: 10px 30px;
     margin-top: 20px;
     margin-bottom: 20px;
 
     border-radius: 10px;
-    background-color: #1f1d1d;
-    color: #ffffff;
+    background-color: #25282c;
+    color: #F2F2F2;
     border: none;
     outline: none;
     cursor: pointer;
     :hover {
-        background-color: #ff6600;
-        color: #000000;
-        box-shadow: 0px 0px 7px 2px #000000;
+        color: #25282c;
+        background-color: #F2F2F2;
     }
 `;

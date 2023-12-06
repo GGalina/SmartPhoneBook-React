@@ -1,11 +1,11 @@
 import { selectorIsLoggedIn } from 'Redux/Auth/authSelectors';
 import { useSelector } from 'react-redux';
-import {Container, Title, Desc, LinkBox, Link} from './Home.styled'
+import {Container, Title, Desc, LinkBox, Link, Wrapper} from './Home.styled'
 
 export default function Home() {
     const isLoggedIn = useSelector(selectorIsLoggedIn);
     return (
-        <>
+        <Wrapper>
             {!isLoggedIn && (
             <Container>
                 <Title>Hi there!</Title>
@@ -26,6 +26,6 @@ export default function Home() {
                     </LinkBox>
                 </Container>
             )}
-        </>
+        </Wrapper>
     );
 };

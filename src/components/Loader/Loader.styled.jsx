@@ -13,5 +13,5 @@ export const Loading = styled(Bars)`
 `;
 
 export const LoadingText = styled.h2`
-    color: #ff6600;
+    color: #25282c;
 `;

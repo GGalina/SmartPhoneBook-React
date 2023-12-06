@@ -1,26 +1,37 @@
 import styled from 'styled-components';
+import backgroundGrey from '../../assets/background-grey.jpg';
 
 export const Container = styled.div`
-    width: 800px;
-    background-color: #1f1d1d;
-    margin: 50px auto;
-    border-radius: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    position: relative;
-    box-shadow: 0px 0px 20px 10px #ff6600;
+    background-color: #99a7b5;
+    margin: 0 auto;
+    padding-bottom: 30px;
+`;
+
+export const Image = styled.div`
+    width: 100%;
+    height: 50px;
+    background-image: url(${backgroundGrey}); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 `;
 
 export const Title = styled.h1`
     font-family: 'Roboto', sans-serif;
-    font-size: 36px;
+    font-size: 28px;
+    font-weight: 600;
+    display: block;
+    text-align: left;
+    padding-top: 10px;
+    color: #25282c;
     text-align: center;
-    color: #ffffff;
+    padding: 20px 0;
 `;
 
 export const SubTitle = styled.h2`
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
-    color: #ffffff;
+    color: #25282c;
+    padding: 20px 0;
 `;

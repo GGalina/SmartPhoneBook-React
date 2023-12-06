@@ -10,10 +10,8 @@ export const Navigation = () => {
     return (
         <NavigationContainer>
             <Box>
-                <Link to="/">
-                    Home
-                </Link>
-                {isLoggedIn && <Link to="/contacts"> Phonebook</Link>}
+                <Link to="/"> Home </Link>
+                {isLoggedIn && <Link to="/contacts"> Phonebook </Link>}
             </Box>
             {!isLoggedIn && <AuthNav />}
             {isLoggedIn && <UserMenu />}

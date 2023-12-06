@@ -1,113 +1,54 @@
-# React homework template
+# SmartPhoneBook-React
 
-Этот проект был создан при помощи
-[Create React App](https://github.com/facebook/create-react-app). Для знакомства
-и настройки дополнительных возможностей
-[обратись к документации](https://facebook.github.io/create-react-app/docs/getting-started).
+Welcome to the SmartPhoneBook-React Mini Project! This web application empowers users to manage their contact lists by providing account creation, login functionality, and a dynamic phonebook interface. The project leverages technologies such as React, Redux, Axios, React-Loading-Icons, and Styled-Components.
 
-## Создание репозитория по шаблону
+Live Demo: [SmartPhoneBook-React](https://ggalina.github.io/SmartPhoneBook-React/)
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
-`«Create a new repository»`, как показано на изображении.
+## Getting Started
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+To run the project on your local machine, follow these steps:
 
-На следующем шаге откроется страница создания нового репозитория. Заполни поле
-его имени, убедись что репозиторий публичный, после чего нажми кнопку
-`«Create repository from template»`.
+1. **Clone the Repository**:
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+   ```bash
+   git clone https://github.com/GGalina/SmartPhoneBook-React.git
 
-После того как репозиторий будет создан, необходимо перейти в настройки
-созданного репозитория на вкладку `Settings` > `Actions` > `General` как
-показано на изображении.
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+2. **Navigate to the Project Directory**:
 
-Проскролив страницу до самого конца, в секции `«Workflow permissions»` выбери
-опцию `«Read and write permissions»` и поставь галочку в чекбоксе. Это
-необходимо для автоматизации процесса деплоя проекта.
+    ```bash
+    cd SmartPhoneBook-React
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+3. **Install Dependencies**:
+Make sure you have Node.js and npm installed.
 
-Теперь у тебя есть личный репозиторий проекта, со структурой файлов и папок
-репозитория-шаблона. Далее работай с ним как с любым другим личным репозиторием,
-клонируй его себе на компьютер, пиши код, делай коммиты и отправляй их на
-GitHub.
+    ```bash
+    npm install
+    
+4. **Start the Development Server**:
+To start the project, run the following command:
 
-## Подготовка к работе
+    ```bash
+    npm start
 
-1. Убедись что на компьютере установлена LTS-версия Node.js.
-   [Скачай и установи](https://nodejs.org/en/) её если необходимо.
-2. Установи базовые зависимости проекта командой `npm install`.
-3. Запусти режим разработки, выполнив команду `npm start`.
-4. Перейди в браузере по адресу [http://localhost:3000](http://localhost:3000).
-   Эта страница будет автоматически перезагружаться после сохранения изменений в
-   файлах проекта.
+## Features
 
-## Деплой
+**React**: Employs for structuring web pages and implementing application logic.
 
-Продакшн версия проекта будет автоматически проходить линтинг, собираться и
-деплоиться на GitHub Pages, в ветку `gh-pages`, каждый раз когда обновляется
-ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
-необходимо в файле `package.json` отредактировать поле `homepage`, заменив
-`your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
+**Styled-Components**: Used for crafting an aesthetically pleasing user interface.
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+**React-Loading-Icons**: Displays a loading icon during API requests for enhanced user experience.
 
-Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
-выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
-это небыло сделано автоматически.
+**Axios**: Facilitates asynchronous requests to the API.
 
-![GitHub Pages settings](./assets/repo-settings.png)
+**Redux**: Centralizes and manages the state of the project.
 
-### Статус деплоя
 
-Статус деплоя крайнего коммита отображается иконкой возле его идентификатора.
+## Usage
 
-- **Желтый цвет** - выполняется сборка и деплой проекта.
-- **Зеленый цвет** - деплой завершился успешно.
-- **Красный цвет** - во время линтинга, сборки или деплоя произошла ошибка.
+**Register**: Enables users to create an account with their name, email, and password.
 
-Более детальную информацию о статусе можно посмотреть кликнув по иконке, и в
-выпадающем окне перейти по ссылке `Details`.
+**Login**: Allows users to log in to their personalized phonebook using their credentials.
 
-![Deployment status](./assets/deploy-status.png)
+**Phonebook**: Renders a user's phonebook, where they can add new contacts, remove existing ones, and filter contacts by name.
 
-### Живая страница
-
-Через какое-то время, обычно пару минут, живую страницу можно будет посмотреть
-по адресу указанному в отредактированном свойстве `homepage`. Например, вот
-ссылка на живую версию для этого репозитория
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
-
-Если открывается пустая страница, убедись что во вкладке `Console` нет ошибок
-связанных с неправильными путями к CSS и JS файлам проекта (**404**). Скорее
-всего у тебя неправильное значение свойства `homepage` в файле `package.json`.
-
-### Маршрутизация
-
-Если приложение использует библиотеку `react-router-dom` для маршрутизации,
-необходимо дополнительно настроить компонент `<BrowserRouter>`, передав в пропе
-`basename` точное название твоего репозитория. Слеш в начале строки обязателен.
-
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
-
-## Как это работает
-
-![How it works](./assets/how-it-works.png)
-
-1. После каждого пуша в ветку `main` GitHub-репозитория, запускается специальный
-   скрипт (GitHub Action) из файла `.github/workflows/deploy.yml`.
-2. Все файлы репозитория копируются на сервер, где проект инициализируется и
-   проходит линтинг и сборку перед деплоем.
-3. Если все шаги прошли успешно, собранная продакшн версия файлов проекта
-   отправляется в ветку `gh-pages`. В противном случае, в логе выполнения
-   скрипта будет указано в чем проблема.

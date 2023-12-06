@@ -3,7 +3,7 @@ import { Link, Container } from './AuthNav.styled';
 export const AuthNav = () => {
     return (
         <Container>
-            <Link to="/register">
+            <Link to="/register"> 
                 Register
             </Link>
             <Link to="/login">
